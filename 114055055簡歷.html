@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人履歷 - 趙泓棨</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-primary: #111111;
+            --text-secondary: #666666;
+            --line-color: #ebebeb;
+            --accent-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Helvetica Neue", "Arial", "PingFang TC", "Microsoft JhengHei", sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            display: flex;
+            justify-content: center;
+            padding: 100px 24px;
+            line-height: 1.5;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        /* 標題區 */
+        header {
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 400;
+            letter-spacing: 6px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .contact-info {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            letter-spacing: 0.5px;
+            line-height: 2;
+        }
+
+        /* 區塊樣式 */
+        section {
+            margin-bottom: 60px;
+        }
+
+        h2 {
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: var(--accent-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: var(--line-color);
+            margin-left: 20px;
+        }
+
+        /* 內容樣式 */
+        .content-item {
+            margin-bottom: 15px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .main-text {
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+
+        .sub-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .date-text {
+            font-size: 0.85rem;
+            color: #aaa;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* 技能列表 */
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 24px;
+        }
+
+        .skill-item {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            position: relative;
+        }
+
+        /* 響應式 */
+        @media (max-width: 480px) {
+            header { margin-bottom: 50px; }
+            h1 { font-size: 2rem; }
+            .row { flex-direction: column; }
+            .date-text { margin-top: 4px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>趙泓棨</h1>
+            <div class="contact-info">
+                亞洲大學 Asia University | 學號：114055055<br>
+                Email: a0921864431@gmail.com<br>
+                Location: Taichung, Taiwan
+            </div>
+        </header>
+
+        <section>
+            <h2>Education</h2>
+            <div class="content-item">
+                <div class="row">
+                    <span class="main-text">亞洲大學</span>
+                    <span class="date-text">2025 — 2029</span>
+                </div>
+                <div class="sub-text">室內設計學系 / Interior Design</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Professional Skills</h2>
+            <div class="skills-wrap">
+                <span class="skill-item">空間規劃與平面配置</span>
+                <span class="skill-item">AutoCAD / SketchUp / V-Ray</span>
+                <span class="skill-item">Copic 麥克筆表現技法</span>
+                <span class="skill-item">模型製作與精細改裝</span>
+                <span class="skill-item">極簡美學與工業風格</span>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Resume: Chao Hung-Chi (114055055)");
+        });
+    </script>
+</body>
+</html>
