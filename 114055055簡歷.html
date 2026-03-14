@@ -34,12 +34,15 @@
             max-width: 600px;
         }
 
-        /* 標題區 */
+        /* 標題與照片區塊 */
         header {
             margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        h1 {
+        .header-content h1 {
             font-size: 2.4rem;
             font-weight: 400;
             letter-spacing: 6px;
@@ -52,6 +55,23 @@
             color: var(--text-secondary);
             letter-spacing: 0.5px;
             line-height: 2;
+        }
+
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 1px solid var(--line-color);
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 調整照片中心點，確保人像居中 */
+            object-position: center;
         }
 
         /* 區塊樣式 */
@@ -119,12 +139,21 @@
             position: relative;
         }
 
-        /* 響應式 */
+        /* 響應式調整 */
         @media (max-width: 480px) {
-            header { margin-bottom: 50px; }
+            header { 
+                flex-direction: column-reverse; 
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            .profile-photo {
+                margin-bottom: 30px;
+            }
             h1 { font-size: 2rem; }
             .row { flex-direction: column; }
             .date-text { margin-top: 4px; }
+            h2::after { display: none; }
+            h2 { justify-content: center; }
         }
     </style>
 </head>
@@ -132,11 +161,16 @@
 
     <div class="container">
         <header>
-            <h1>趙泓棨</h1>
-            <div class="contact-info">
-                亞洲大學 Asia University | 學號：114055055<br>
-                Email: a0921864431@gmail.com<br>
-                Location: Taichung, Taiwan
+            <div class="header-content">
+                <h1>趙泓棨</h1>
+                <div class="contact-info">
+                    亞洲大學 Asia University | 學號：114055055<br>
+                    Email: a0921864431@gmail.com<br>
+                    Location: Taichung, Taiwan
+                </div>
+            </div>
+            <div class="profile-photo">
+                <img src="images/LINE_ALBUM_202622_260315_1.jpg" alt="趙泓棨 臉部照片">
             </div>
         </header>
 
